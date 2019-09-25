@@ -159,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements OctusResultCallba
         OctusConfig octusConfig = new OctusConfig.Builder()
                 .setLicenseKey(OCTUS_LICENSE_KEY)
                 .showInstruction(false)
+                .setScanMode(Utility.ScanMode.AUTO)
                 .dataPointsAll(false)
                 .orientationFlat(false)
                 .setScanAlertType(Utility.Alert.VIBRATION)
@@ -289,7 +290,14 @@ Error codes and their meaning are tabulated below
   
   Accepts the Octus licence key as a `String`
   
+- `setScanMode(Utility.ScanMode scanMode)` ***(Required)***
   
+  Sets the scanning mode
+  
+  | Value          | Effect                 |
+  | -------------- | ---------------------- |
+  | Utility.ScanMode.AUTO    | Automatically starts scanning as soon as camera preview is ready|
+  | Utility.ScanMode.MANUAL  | Displays a button used to start the scan when clicked |
 
 - `setDocumentType(Document documentType)` ***(Required)***
   
