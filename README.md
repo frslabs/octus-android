@@ -1,5 +1,5 @@
 # OCTUS SDK
-![version](https://img.shields.io/badge/version-v2.0.0-blue)
+![version](https://img.shields.io/badge/version-v2.0.1-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -17,6 +17,7 @@ For the list of supported documents per country , refer to [Octus Country Specif
   - [Initiating the Octus scanner](#initiating-the-octus-scanner)
   - [Handling the result](#handling-the-result)
 - [Octus Result](#octus-result)
+- [Octus Error Codes](#octus-error-codes)
 - [Octus Parameters](#octus-parameters)
 - [Help](#help)
 
@@ -88,10 +89,18 @@ dependencies {
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
-    implementation 'com.frslabs.atlas.android.sdk:octus:2.0.0' //Octus SDK Core
-    implementation 'com.gemalto.jp2:jp2-android:1.0'
+    //Core Dependency
+    implementation 'com.frslabs.atlas.android.sdk:octus:2.0.1' //Octus SDK Core
+    
+    //Additional Depedencies 
+    implementation 'com.gemalto.jp2:jp2-android:1.0' 
     implementation 'com.rmtheis:tess-two:9.0.0'
     implementation 'com.google.android.gms:play-services-vision:15.0.0'
+    
+    implementation('com.frslabs.android.sdk:torus:0.0.6')
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation('com.squareup.retrofit2:retrofit:2.3.0')
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
 ```
 
@@ -145,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements OctusResultCallba
    private void callOctusSdk() {
 
         //Initialize the Octus Sdk Config object with the appropriate configurations
-        Config octusConfig = new Config.Builder()
+        OctusConfig octusConfig = new OctusConfig.Builder()
                 .setLicenseKey(OCTUS_LICENSE_KEY)
                 .showInstruction(false)
                 .dataPointsAll(false)
@@ -180,10 +189,10 @@ Your activity must implement `OctusResultCallback` to receive the result.
     // ...
 
     @Override
-    public void onScanSuccess(ScanResult scanResult) {
+    public void onScanSuccess(OctusResult octusResult) {
 
         /* Handle the Octus Sdk result here */
-        Log.d("OctusSdk Result :", scanResult.toString());
+        Log.d("OctusSdk Result :", octusResult.toString());
 
     }
 
@@ -198,61 +207,79 @@ Your activity must implement `OctusResultCallback` to receive the result.
     // ...
 ```
 
+For all `errorCode`'s and their meanings refer [Octus Error Codes](#octus-error-codes)
 
 
 ## Octus Result
 
-Result of the scan is obtained from the `ScanResult` instance . Complete Octus result is given below,
+Result of the scan is obtained from the `OctusResult` instance . Complete Octus result is given below,
 
 ```java
   // ...
 
   @Override
-  public void onScanSuccess(ScanResult scanResult) {
+  public void onScanSuccess(OctusResult octusResult) {
 
         /* Handle the Octus Sdk result here */
-        Log.d("OctusSdk Result :", scanResult.toString());
+        Log.d("OctusSdk Result :", octusResult.toString());
 
         /* Below values are given for ID card with MRTD & without MRTD */
-        String code = scanResult.getCode();
-        String documentType = scanResult.getDocumentType();
-        String name1 = scanResult.getName1();
-        String name2 = scanResult.getName2();
-        String idNumber1 = scanResult.getDocumentNumber1();
-        String idNumber2 = scanResult.getDocumentNumber2();
-        String dob = scanResult.getDateOfBirth();
-        String expiry = scanResult.getExpiryDate();
-        String gender = scanResult.getGender();
-        String address1 = scanResult.getAddress1();
-        String address2 = scanResult.getAddress2();
-        String address3 = scanResult.getAddress3();
-        String address4 = scanResult.getAddress4();
-        String city = scanResult.getCity();
-        String state = scanResult.getState();
-        String idCountry = scanResult.getCountry();
-        String idIssCountry = scanResult.getIssuingCountry();
+        String code = octusResult.getCode();
+        String documentType = octusResult.getDocumentType();
+        String name1 = octusResult.getName1();
+        String name2 = octusResult.getName2();
+        String idNumber1 = octusResult.getDocumentNumber1();
+        String idNumber2 = octusResult.getDocumentNumber2();
+        String dob = octusResult.getDateOfBirth();
+        String expiry = octusResult.getExpiryDate();
+        String gender = octusResult.getGender();
+        String address1 = octusResult.getAddress1();
+        String address2 = octusResult.getAddress2();
+        String address3 = octusResult.getAddress3();
+        String address4 = octusResult.getAddress4();
+        String city = octusResult.getCity();
+        String state = octusResult.getState();
+        String idCountry = octusResult.getCountry();
+        String idIssCountry = octusResult.getIssuingCountry();
 
         /* Below values gives the Document Image path */
-        String idFacePath = scanResult.getFace();
-        String idFrontPhotoPath = scanResult.getPhoto1();
-        String idBackPhotopath = scanResult.getPhoto2();
+        String idFacePath = octusResult.getFace();
+        String idFrontPhotoPath = octusResult.getPhoto1();
+        String idBackPhotopath = octusResult.getPhoto2();
 
         /* Below values are applicable to Cheque Leaf (India) only */
-        String bankAccountNumber = scanResult.getBankAccountNumber();
-        String bankAccIfsc = scanResult.getBankIfsCode();
-        String gstn = scanResult.getGSTN();
+        String bankAccountNumber = octusResult.getBankAccountNumber();
+        String bankAccIfsc = octusResult.getBankIfsCode();
+        String gstn = octusResult.getGSTN();
 
         /* Below values are applicable to Voter ID (India) only */
-        String frontConfidenceScore = scanResult.getConfidenceIndexF();
-        String backConfidenceScore = scanResult.getConfidenceIndexB();
-        String frontIdOcrStatus = scanResult.getFrontIdScanStatus();
-        String backIdOcrStatus = scanResult.getConfidenceIndexB();
+        String frontConfidenceScore = octusResult.getConfidenceIndexF();
+        String backConfidenceScore = octusResult.getConfidenceIndexB();
+        String frontIdOcrStatus = octusResult.getFrontIdScanStatus();
+        String backIdOcrStatus = octusResult.getConfidenceIndexB();
   }
   
   // ...
 ```
 
+## Octus Error Codes
 
+Error codes and their meaning are tabulated below
+
+| Code          | Message                 |
+| -------------- | ---------------------- |
+| 801  | Scan timeout                |
+| 802  | Invalid ID parameters passed|
+| 803  | Camera permission denied    |
+| 804  | Scan interrupted            |
+| 805  | License expired             |
+| 806  | License invalid             |
+| 807  | Invalid camera resolution   |
+| 811  | QR not detected             |
+| 812  | QR parsing failed           |
+| 108  | No Internet                 |
+| 401  | Api Limit Exceed            |
+| 429  | Too many request            |
 
 ## Octus Parameters
 
