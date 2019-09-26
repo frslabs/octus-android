@@ -13,6 +13,7 @@ For the list of supported documents per country , refer to [Octus Country Specif
   - [Using maven repository](#using-maven-repository)
 - [Setup](#setup)
   - [Permissions](#permissions)
+  - [Proguard rules](#proguard-rules)
 - [Quick Start](#quick-start)
   - [Initiating the Octus scanner](#initiating-the-octus-scanner)
   - [Handling the result](#handling-the-result)
@@ -47,6 +48,8 @@ allprojects {
         google() 
         jcenter() 
         maven { url "https://jitpack.io" }
+        
+        //Maven credentials for the Octus SDK
         maven { 
             // URL for Octus SDK. 
             url "ENTER_OCTUS_MAVEN_REPO_URL_HERE"                  
@@ -55,6 +58,19 @@ allprojects {
                    password 'repo-password' 
             }
        }
+       
+       /*
+        *Include below code only for transaction based billing
+        */
+        //Maven credentials for the Torus SDK
+        maven {
+            url "https://torus-android.repo.frslabs.space/"
+            credentials {
+                username '<YOUR_USERNAME>'
+                password '<YOUR_PASSOWRD>'
+            }
+        }
+        
     }
 }
 ```
@@ -91,14 +107,16 @@ dependencies {
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
-    //Core Dependency
-    implementation 'com.frslabs.atlas.android.sdk:octus:2.0.1' //Octus SDK Core
+    // Octus Core Dependency
+    implementation 'com.frslabs.atlas.android.sdk:octus:2.0.1' 
     
-    //Additional Depedencies 
+    // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
     implementation 'com.rmtheis:tess-two:9.0.0'
     implementation 'com.google.android.gms:play-services-vision:15.0.0'
     
+    // Optional - Required if transaction based billing is enabled
+    // Octus billing dependencies
     implementation('com.frslabs.android.sdk:torus:0.0.6')
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation('com.squareup.retrofit2:retrofit:2.3.0')
@@ -118,12 +136,32 @@ Octus requires the camera permission to initiate its scanner
     <!-- Required by Octus -->
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!-- Optional - Required if transaction based billing is enabled -->
+    <uses-permission android:name="android.permission.INTERNET" />  
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application>
       ...
     </application>
 
 </manifest>
 ```
+
+#### Proguard rules
+
+Include below proguard rules only if transaction based billing is enabled
+
+```java
+-keep class retrofit.** { *; }
+
+-keepclasseswithmembers class * {
+   @retrofit2.http.* <methods>;
+}
+-keepclasseswithmembers interface * {
+   @retrofit2.* <methods>;
+}
+```
+
 
 ## Quick Start
 
@@ -154,27 +192,34 @@ public class MainActivity extends AppCompatActivity implements OctusResultCallba
     }
 
    private void callOctusSdk() {
-
-        //Initialize the Octus Sdk Config object with the appropriate configurations
-        OctusConfig octusConfig = new OctusConfig.Builder()
-                .setLicenseKey(OCTUS_LICENSE_KEY)
-                .showInstruction(false)
-                .setScanMode(Utility.ScanMode.AUTO)
-                .dataPointsAll(false)
-                .orientationFlat(false)
-                .setScanAlertType(Utility.Alert.VIBRATION)
-                .setLanguage(Utility.Language.EN)
-                .setDocumentCountry(Country.IN)
-                .setDocumentType(Document.VID)
-                .setDocumentSubType(Utility.SubType.OCR)
-                .setDocumentSide(Utility.Side.FRONT_BACK)
-                .aadhaarNumberMasked(false)
-                .build();
-
-        //Call the Octus Sdk to start scanning
-        Octus.setSdkConfig(octusConfig)
-                .enableLogs()
-                .initialise(this, this); //Pass the main context here
+        
+        try {
+        
+              //Initialize the Octus Sdk Config object with the appropriate configurations
+              OctusConfig octusConfig = new OctusConfig.Builder()
+                      .setLicenseKey(OCTUS_LICENSE_KEY)
+                      .showInstruction(false)
+                      .setScanMode(Utility.ScanMode.AUTO)
+                      .dataPointsAll(false)
+                      .orientationFlat(false)
+                      .setScanAlertType(Utility.Alert.VIBRATION)
+                      .setLanguage(Utility.Language.EN)
+                      .setDocumentCountry(Country.IN)
+                      .setDocumentType(Document.VID)
+                      .setDocumentSubType(Utility.SubType.OCR)
+                      .setDocumentSide(Utility.Side.FRONT_BACK)
+                      .aadhaarNumberMasked(false)
+                      .build();
+      
+              //Call the Octus Sdk to start scanning
+              Octus.setSdkConfig(octusConfig)
+                      .enableLogs()
+                      .initialise(this, this); //Pass the main context here
+                
+        }catch (OctusInitException e){
+              //Handle exception here
+              e.printStackTrace();
+        }
     }
 
     // ...
