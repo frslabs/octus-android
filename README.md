@@ -52,7 +52,7 @@ allprojects {
         //Maven credentials for the Octus SDK
         maven { 
             // URL for Octus SDK. 
-            url "ENTER_OCTUS_MAVEN_REPO_URL_HERE"                  
+            url "https://octus-android.repo.frslabs.space/"                  
             credentials { 
                    username 'repo-username' 
                    password 'repo-password' 
