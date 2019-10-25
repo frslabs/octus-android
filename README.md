@@ -1,5 +1,5 @@
 # OCTUS SDK
-![version](https://img.shields.io/badge/version-v2.0.2-blue)
+![version](https://img.shields.io/badge/version-v2.0.4-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -47,7 +47,6 @@ allprojects {
     repositories { 
         google() 
         jcenter() 
-        maven { url "https://jitpack.io" }
         
         //Maven credentials for the Octus SDK
         maven { 
@@ -108,7 +107,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Octus Core Dependency
-    implementation 'com.frslabs.android.sdk:octus:2.0.2' 
+    implementation 'com.frslabs.android.sdk:octus:2.0.4' 
     
     // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
@@ -305,10 +304,39 @@ Result of the scan is obtained from the `OctusResult` instance . Complete Octus 
         String backConfidenceScore = octusResult.getConfidenceIndexB();
         String frontIdOcrStatus = octusResult.getFrontIdScanStatus();
         String backIdOcrStatus = octusResult.getConfidenceIndexB();
+        
+        /* Below values are applicable to Aadhaar Card (India) only */
+        String aadhaarMaskStatus = octusResult.getAadhaarMaskStatus();
+        
   }
   
   // ...
 ```
+
+Given below are some public methods of `OctusResult` in brief
+
+<div>
+<table style="width:100%">
+<tr>
+<th bgcolor="#F1F1F1" colspan="3">Public Methods</th>
+</tr>
+<tr>
+<td>String</td>
+<td>getAadhaarMaskStatus()</td>
+<td>
+<pre>
+Gets the Aadhaar number masking status. Possible values are,
+
+‘XX’ - BOTH SIDES ALREADY MASKED
+‘YY’ - BOTH SIDES MASKED
+‘YN’ - FRONT MASKED, BACK NOT MASKED
+‘NN’ - BOTH SIDES NOT MASKED 
+</pre>
+</td>
+</tr>
+</table>
+</div>
+
 
 ## Octus Error Codes
 
