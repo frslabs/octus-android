@@ -111,7 +111,7 @@ dependencies {
     
     // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
-    implementation 'com.rmtheis:tess-two:9.0.0'
+    implementation 'com.rmtheis:tess-two:9.1.0'
     implementation 'com.google.android.gms:play-services-vision:15.0.0'
     
     // Optional - Required if transaction based billing is enabled
