@@ -107,7 +107,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Octus Core Dependency
-    implementation 'com.frslabs.android.sdk:octus:2.0.4' 
+    implementation 'com.frslabs.android.sdk:octus:2.0.5' 
     
     // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
@@ -148,7 +148,7 @@ Octus requires the camera permission to initiate its scanner
 
 #### Proguard rules
 
-Include below proguard rules only if transaction based billing is enabled
+Include below proguard rules only if transaction based billing is enabled (version <= 2.0.4)
 
 ```java
 -keep class retrofit.** { *; }
