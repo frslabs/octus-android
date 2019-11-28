@@ -117,8 +117,6 @@ dependencies {
     // Optional - Required if transaction based billing is enabled
     // Octus billing dependencies
     implementation('com.frslabs.android.sdk:torus:0.0.6')
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation('com.squareup.retrofit2:retrofit:2.3.0')
     implementation 'com.google.code.gson:gson:2.8.5'
 }
 ```
@@ -145,22 +143,6 @@ Octus requires the camera permission to initiate its scanner
 
 </manifest>
 ```
-
-#### Proguard rules
-
-Include below proguard rules only if transaction based billing is enabled (version <= 2.0.4)
-
-```java
--keep class retrofit.** { *; }
-
--keepclasseswithmembers class * {
-   @retrofit2.http.* <methods>;
-}
--keepclasseswithmembers interface * {
-   @retrofit2.* <methods>;
-}
-```
-
 
 ## Quick Start
 
