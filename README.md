@@ -116,7 +116,7 @@ dependencies {
     
     // Optional - Required if transaction based billing is enabled
     // Octus billing dependencies
-    implementation('com.frslabs.android.sdk:torus:0.0.6')
+    implementation 'com.frslabs.android.sdk:torus:0.1.0'
     implementation 'com.google.code.gson:gson:2.8.5'
 }
 ```
