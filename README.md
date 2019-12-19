@@ -290,6 +290,9 @@ Result of the scan is obtained from the `OctusResult` instance . Complete Octus 
         /* Below values are applicable to Aadhaar Card (India) only */
         String aadhaarMaskStatus = octusResult.getAadhaarMaskStatus();
         
+        /* Below values are applicable to MRTD supported documents only */
+        String isMRZChecksumValidated = octusResult.getMrzChecksumValidityStatus();
+        
   }
   
   // ...
