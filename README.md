@@ -107,7 +107,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Octus Core Dependency
-    implementation 'com.frslabs.android.sdk:octus:2.0.6' 
+    implementation 'com.frslabs.android.sdk:octus:2.0.7' 
     
     // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
