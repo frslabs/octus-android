@@ -1,5 +1,5 @@
 # OCTUS SDK
-![version](https://img.shields.io/badge/version-v2.0.7-blue)
+![version](https://img.shields.io/badge/version-v2.0.8-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -109,7 +109,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Octus Core Dependency
-    implementation 'com.frslabs.android.sdk:octus:2.0.7' 
+    implementation 'com.frslabs.android.sdk:octus:2.0.8' 
     
     // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
