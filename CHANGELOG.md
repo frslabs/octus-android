@@ -2,7 +2,7 @@
 
 ## **v2.0.8** - *10-01-2020*
 ### Added
--Improvements in OCR of scanned images
+- Improvements in OCR of scanned images
 ### Bug fixes
 - SDK starts scanning of ID dcuments prior to camera permission granted or denied .This issue has been fixed.
 
