@@ -1,5 +1,9 @@
 # Changelog
 
+## **v2.0.9** - *03-02-2020*
+### Bug fixes
+- Fixed UI issue caused due to redundant theme.
+
 ## **v2.0.8** - *10-01-2020*
 ### Added
 - Improvements in OCR of scanned images
