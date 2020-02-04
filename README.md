@@ -317,13 +317,13 @@ Gets the Aadhaar number masking status. Possible values are,
 ‘XX’ - BOTH SIDES ALREADY MASKED
 ‘YY’ - BOTH SIDES MASKED
 ‘YN’ - FRONT MASKED, BACK NOT MASKED
-‘NN’ - BOTH SIDES NOT MASKED 
+‘NY’ - FRONT NOT MASKED, BACK MASKED 
+‘NN’ - BOTH SIDES NOT MASKED
 </pre>
 </td>
 </tr>
 </table>
 </div>
-
 
 ## Octus Error Codes
 
