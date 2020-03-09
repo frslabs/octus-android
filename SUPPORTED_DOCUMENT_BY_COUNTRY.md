@@ -5,6 +5,14 @@
   - **Passport**
   
   - **Driver’s license**
+  
+- **AFGHANISTAN** 
+  
+  - **Passport**
+  
+- **ALBANIA** 
+  
+  - **Passport**
 
 - **AUSTRIA**
   
@@ -17,8 +25,24 @@
   - **Passport**
   
   - **National ID**
+  
+- **BANGLADESH**
+  
+  - **Passport**
+  
+  - **National ID**
 
 - **BELGIUM**
+  
+  - **Passport**
+  
+  - **National ID**
+  
+- **BHUTAN**
+  
+  - **Passport**
+  
+- **BRAZIL**
   
   - **Passport**
   
@@ -29,6 +53,18 @@
   - **Passport**
   
   - **Driver’s license**
+  
+- **CHINA**
+  
+  - **Passport**
+  
+  - **National ID**
+  
+- **CROATIA**
+  
+  - **Passport**
+  
+  - **National ID**
 
 - **DENMARK**
   
@@ -128,7 +164,7 @@
   
   - **National ID**
 
-- **Macao**
+- **MACAO**
   
   - **National ID**
 
@@ -232,17 +268,17 @@
   
   - **Passport**
 
-- **Viet Nam**
+- **VIET NAM**
   
   - **National ID**
   
-- **Zambia**
+- **ZAMBIA**
   
   - **Passport**
   
   - **National ID**
   
-- **Zimbabwe**
+- **ZIMBABWE**
   
   - **Passport**
   
