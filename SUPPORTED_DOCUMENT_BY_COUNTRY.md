@@ -128,6 +128,10 @@
   
   - **National ID**
 
+- **Macao**
+  
+  - **National ID**
+
 - **MALAYSIA**
   
   - **Passport**
@@ -227,3 +231,19 @@
 - **UNITED STATES**
   
   - **Passport**
+
+- **Viet Nam**
+  
+  - **National ID**
+  
+- **Zambia**
+  
+  - **Passport**
+  
+  - **National ID**
+  
+- **Zimbabwe**
+  
+  - **Passport**
+  
+  - **National ID**
