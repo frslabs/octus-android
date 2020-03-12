@@ -69,6 +69,10 @@
 - **DENMARK**
   
   - **Passport**
+  
+- **DOMINICA**
+  
+  - **Passport**
 
 - **EGYPT**
   
@@ -124,7 +128,19 @@
   
   - **GSTIN**
 
+- **IRAQ**
+  
+  - **Passport**
+  
+  - **National ID**
+  
 - **IRELAND**
+  
+  - **Passport**
+  
+  - **National ID**
+  
+- **ISRAEL**
   
   - **Passport**
   
@@ -177,7 +193,17 @@
 - **MALTA**
   
   - **Passport**
+  
+- **MOLDOVA REPUBLIC OF**
+  
+  - **Passport**
+  
+  - **National ID**
 
+- **NEPAL**
+  
+  - **Passport**
+  
 - **NETHERLANDS**
   
   - **Passport**
@@ -194,6 +220,10 @@
   
   - **Driver’s license**
 
+- **NORTH KOREA**
+  
+  - **Passport**
+  
 - **NORWAY**
   
   - **Passport**
