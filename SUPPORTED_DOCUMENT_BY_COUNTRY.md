@@ -240,6 +240,18 @@
   
   - **National ID**
 
+- **ROMANIA**
+  
+  - **Passport**
+  
+- **RUSSIAN FEDERATION**
+  
+  - **Passport**
+  
+- **SIERRA LEONE**
+  
+  - **Passport**
+  
 - **SINGAPORE**
   
   - **Passport**
@@ -259,7 +271,21 @@
   - **Passport**
   
   - **National ID**
+  
+- **SOMALIA**
+  
+  - **Passport**
+  
+- **SOUTH AFRICA**
+  
+  - **Passport**
 
+- **SOUTH KOREA**
+  
+  - **Passport**
+  
+  - **National ID**
+  
 - **SPAIN**
   
   - **Passport**
