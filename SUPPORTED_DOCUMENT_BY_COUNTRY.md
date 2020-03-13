@@ -329,7 +329,27 @@
 - **TUNISIA**
   
   - **Passport**
+  
+- **TURKEY**
+  
+  - **Passport**
 
+- **TURKS AND CAICOS ISLANDS**
+  
+  - **Passport**
+  
+- **UGANDA**
+  
+  - **Passport**
+  
+  - **National ID**
+  
+- **UKRAINE**
+  
+  - **Passport**
+  
+  - **National ID**
+  
 - **UNITED ARAB EMIRATES**
   
   - **Passport**
@@ -347,6 +367,8 @@
   - **Passport**
 
 - **VIET NAM**
+
+  - **Passport**
   
   - **National ID**
   
