@@ -297,6 +297,10 @@
   - **Passport**
   
   - **National ID**
+  
+- **SUDAN**
+  
+  - **Passport**
 
 - **SWEDEN**
   
@@ -305,6 +309,24 @@
   - **National ID**
 
 - **SWITZERLAND**
+  
+  - **Passport**
+  
+- **TAIWAN**
+  
+  - **Passport**
+  
+- **TANZANIA,UNITED REPUBLIC OF**
+  
+  - **Passport**
+  
+- **THAILAND**
+  
+  - **Passport**
+  
+  - **National ID**
+ 
+- **TUNISIA**
   
   - **Passport**
 
