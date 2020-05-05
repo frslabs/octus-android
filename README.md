@@ -335,12 +335,13 @@ Error codes and their meaning are tabulated below
 | 802  | Invalid ID parameters passed|
 | 803  | Camera permission denied    |
 | 804  | Scan was interrupted            |
-| 805  | Octus SDK License got expired             |
-| 806  | Octus SDK License was invalid             |
-| 807  | Invalid camera resolution   |
+| 805  | Octus SDK License got expired   |
+| 806  | Octus SDK License was invalid  |
+| 807  | Octus server error   |
+| 808  | Transaction API failed   |
 | 811  | QR not detected             |
 | 812  | QR parsing failed           |
-| 108  | Internet Unavailable                 |
+| 108  | Internet Unavailable     |
 | 401  | Api Limit Exceeded            |
 | 429  | Too many request            |
 
