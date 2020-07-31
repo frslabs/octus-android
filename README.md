@@ -55,8 +55,8 @@ allprojects {
             // URL for Octus SDK. 
             url "https://octus-android.repo.frslabs.space/"                  
             credentials { 
-                   username 'repo-username' 
-                   password 'repo-password' 
+                   username '<YOUR_USERNAME>' 
+                   password '<YOUR_PASSOWRD>' 
             }
        }
        
