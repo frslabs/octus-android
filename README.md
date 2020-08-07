@@ -123,6 +123,10 @@ dependencies {
 }
 ```
 
+#### Androidx Migration 
+
+Existing users using version 2.x.x can continue to use the SDKs until November 2020 if no changes are made to the App. And any new applications you are developing or if you are updating your existing application, then you must use SDK version 3.x.x which is AndroidX compatible. From 01 August 2020 all new applications integrating our SDK must use 3.x.x version. Support for version 2.x.x will cease from 01 November 2020. Please write to us as support@frslabs.com if you need more information on AndroidX release.
+
 ## Setup
 
 #### Permissions
