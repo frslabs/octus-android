@@ -1,6 +1,6 @@
 # Changelog
 
-## **v2.0.9** - *07-08-2020*
+## **v3.1.0** - *07-08-2020*
 ### Added
 - ExideLife barcode support.
 
