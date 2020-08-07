@@ -104,9 +104,16 @@ And then, add the dependencies
 // ...
 
 dependencies {
-    /* Dependencies for Octus SDK */ 
+    /* Dependencies for Octus SDK Using support library */  
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
+    
+    ************ OR *************
+    
+    /* Dependencies for Octus SDK Using Androidx */ 
+    implementation 'com.google.android.material:<lastest verison>'
+    implementation 'androidx.appcompat:appcompat:<latest version>'
+    implementation 'androidx.constraintlayout:constraintlayout:<latest version>'
    
     // Octus Core Dependency
     implementation 'com.frslabs.android.sdk:octus:3.1.0' 
@@ -118,8 +125,8 @@ dependencies {
     
     // Optional - Required if transaction based billing is enabled
     // Octus billing dependencies
-    implementation 'com.frslabs.android.sdk:torus:0.1.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.frslabs.android.sdk:torus:0.1.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
 }
 ```
 
