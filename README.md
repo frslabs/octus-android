@@ -108,16 +108,18 @@ dependencies {
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
     
-    ************ OR *************
+                       OR 
     
     /* Dependencies for Octus SDK Using Androidx */ 
     implementation 'com.google.android.material:<lastest verison>'
     implementation 'androidx.appcompat:appcompat:<latest version>'
     implementation 'androidx.constraintlayout:constraintlayout:<latest version>'
    
-    // Octus Core Dependency
-    implementation 'com.frslabs.android.sdk:octus:3.1.0' 
-    
+    // Octus Core Dependency & latest version
+    // Support library OCTUS_VERSION = 2.0.9
+    // Androidx OCTUS_VERSION = 3.1.0 
+    implementation 'com.frslabs.android.sdk:octus:<OCTUS_VERSION>'
+        
     // Octus Additional Depedencies 
     implementation 'com.gemalto.jp2:jp2-android:1.0' 
     implementation 'com.rmtheis:tess-two:9.1.0'
