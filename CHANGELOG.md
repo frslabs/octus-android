@@ -1,5 +1,15 @@
 # Changelog
 
+## **v2.0.9** - *07-08-2020*
+### Added
+- ExideLife barcode support.
+
+## **v3.0.0** - *01-08-2020*
+### Bug fixes
+- Fixed Licence key end url issue.
+### New
+- Migrated Octus from support library to AndroidX
+
 ## **v2.0.9** - *03-02-2020*
 ### Bug fixes
 - Fixed UI issue caused due to redundant theme.
