@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.1.0** - *15-08-2020*
+### Added
+- Torus v1.0.0 integrated 
+
 ## **v3.1.0** - *07-08-2020*
 ### Added
 - ExideLife barcode support.
