@@ -1,6 +1,6 @@
 # Changelog
 
-## **v3.1.0** - *15-08-2020*
+## **v3.2.0** - *15-08-2020*
 ### Added
 - Torus v1.0.0 integrated 
 
