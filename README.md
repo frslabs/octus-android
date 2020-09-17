@@ -116,7 +116,7 @@ dependencies {
                        OR 
     
     /* Dependencies for Octus SDK Using Androidx */ 
-    implementation 'com.google.android.material:<lastest verison>'
+    implementation 'com.google.android.material:<lastest version>'
     implementation 'androidx.appcompat:appcompat:<latest version>'
     implementation 'androidx.constraintlayout:constraintlayout:<latest version>'
    
