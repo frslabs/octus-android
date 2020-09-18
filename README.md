@@ -5,7 +5,7 @@ Octus SDK uses advanced deep learning technologies for accurate and fast ID scan
 
 For the list of supported documents per country , refer to [Octus Country Specific Supported Documents](SUPPORTED_DOCUMENT_BY_COUNTRY.md)
 
-You can find the release history at [Changelog](CHANGELOG.md)
+**You can find the latest version and release history [Here](CHANGELOG.md)**
 
 # Table Of Content
 
@@ -103,37 +103,54 @@ defaultConfig {
 // ...
 ```
 
-And then, add the dependencies
+And then, Find the latest version of Octus SDK [Here](CHANGELOG.md) and add the dependencies
+
+For versions 3.X.X and above ,
 ```groovy
 
 // ...
 
 dependencies {
-    /* Dependencies for Octus SDK Using support library */  
-    implementation 'com.android.support:design:<version above 23.4.0>'      
-    implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
-    
-                       OR 
-    
     /* Dependencies for Octus SDK Using Androidx */ 
     implementation 'com.google.android.material:<lastest version>'
     implementation 'androidx.appcompat:appcompat:<latest version>'
     implementation 'androidx.constraintlayout:constraintlayout:<latest version>'
    
-    // Octus Core Dependency & latest version
-    // Support library OCTUS_VERSION = 2.0.9
-    // Androidx OCTUS_VERSION = 3.2.0 
-    implementation 'com.frslabs.android.sdk:octus:<OCTUS_VERSION>'
-        
-    // Octus Additional Depedencies 
-    implementation 'com.gemalto.jp2:jp2-android:1.0' 
-    implementation 'com.rmtheis:tess-two:9.1.0'
-    implementation 'com.google.android.gms:play-services-vision:15.0.0'
+    // ...
     
-    // Optional - Required if transaction based billing is enabled
-    // Octus billing dependencies
-    implementation 'com.frslabs.android.sdk:torus:1.0.0'
-    implementation 'com.google.code.gson:gson:2.8.6'
+    /* Core Octus SDK Dependencies */
+    implementation 'com.frslabs.android.sdk:octus:3.X.X' // Required . Find latest version at https://github.com/frslabs/octus-android/blob/master/CHANGELOG.md
+    implementation 'com.gemalto.jp2:jp2-android:1.0' // Required
+    implementation 'com.rmtheis:tess-two:9.1.0' // Required
+    implementation 'com.google.android.gms:play-services-vision:15.0.0' // Required
+    implementation 'com.frslabs.android.sdk:torus:1.0.0' // Optional - Needed if transaction based billing is enabled
+    implementation 'com.google.code.gson:gson:2.8.6' // Optional - Needed if transaction based billing is enabled
+    
+    // ...
+}
+```
+
+For versions 2.X.X and below ,
+```groovy
+
+// ...
+
+dependencies {
+    /* Dependencies for Octus SDK Using support library (Non-AndroidX) */  
+    implementation 'com.android.support:design:<version above 23.4.0>'      
+    implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
+   
+    // ...
+    
+    /* Core Octus SDK Dependencies */
+    implementation 'com.frslabs.android.sdk:octus:2.X.X' // Required , Recent Non-AndroidX version is 2.0.9
+    implementation 'com.gemalto.jp2:jp2-android:1.0' // Required
+    implementation 'com.rmtheis:tess-two:9.1.0' // Required
+    implementation 'com.google.android.gms:play-services-vision:15.0.0' // Required
+    implementation 'com.frslabs.android.sdk:torus:1.0.0' // Optional - Needed if transaction based billing is enabled
+    implementation 'com.google.code.gson:gson:2.8.6' // Optional - Needed if transaction based billing is enabled
+    
+    // ...
 }
 ```
 
