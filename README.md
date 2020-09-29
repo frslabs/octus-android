@@ -123,7 +123,7 @@ dependencies {
     implementation 'com.gemalto.jp2:jp2-android:1.0' // Required
     implementation 'com.rmtheis:tess-two:9.1.0' // Required
     implementation 'com.google.android.gms:play-services-vision:15.0.0' // Required
-    implementation 'com.frslabs.android.sdk:torus:1.0.0' // Optional - Needed if transaction based billing is enabled
+    implementation 'com.frslabs.android.sdk:torus:1.0.1' // Optional - Needed if transaction based billing is enabled
     implementation 'com.google.code.gson:gson:2.8.6' // Optional - Needed if transaction based billing is enabled
     
     // ...
