@@ -1,5 +1,13 @@
 # Changelog
 
+## **v3.3.0** - *02-05-2021*
+### Added
+Updated responses to scanning front and back of ID cards. The responses for frontIdScanStatus and backIdScanStatus are improved with response codes of Success, Fail or NA (Not Applicable). For instance
+1)    If you let the user scan only the front, you will get the responses for frontIdScanStatus and backIdScanStatus as Success and NA.
+2)    If you let the user scan both front and back, and if both are scanned successfully, you will get the responses for frontIdScanStatus and backIdScanStatus as Success and Success.
+3)    If you let the user scan both front and back, and if front has scanned successfully and back has failed, you will get the responses for frontIdScanStatus and backIdScanStatus as Success and Fail.
+Note that for conditions 2 and 3 above to be satisfied, you will need to set dataPointAll='False (meaning that the scanner will return values even if one value is scanned from the front or back of the ID). 
+
 ## **v3.2.0** - *15-08-2020*
 ### Added
 - Torus v1.0.0 integrated 
