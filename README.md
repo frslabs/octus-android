@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.2.0-blue)
+![version](https://img.shields.io/badge/version-v3.3.0-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -288,6 +288,10 @@ Result of the scan is obtained from the `OctusResult` instance . Complete Octus 
         /* Below values are given for ID card with MRTD & without MRTD */
         String code = octusResult.getCode();
         String documentType = octusResult.getDocumentType();
+        String documentCountry = octusResult.getDocumentCountry();
+        String documentSubType = octusResult.getDocumentSubType();
+        String documentSide = octusResult.getDocumentSide();
+        String dataPointAll = octusResult.getDataPointAll();
         String name1 = octusResult.getName1();
         String name2 = octusResult.getName2();
         String idNumber1 = octusResult.getDocumentNumber1();
