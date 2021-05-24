@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.4.0** - *24-05-2021*
+### Fixed
+- Camera API2 frame color issue resolved.
+
 ## **v3.3.0** - *02-05-2021*
 ### Added
 Updated responses to scanning front and back of ID cards. The responses for frontIdScanStatus and backIdScanStatus are improved with response codes of Success, Fail or NA (Not Applicable). For instance
