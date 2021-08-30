@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.5.0** - *30-08-2021*
+### Fixed
+- date of birth and address issue for new voter id card.
+
 ## **v3.4.0** - *24-05-2021*
 ### Fixed
 - Camera API2 frame color issue resolved.
