@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.6.0** - *02-12-2021*
+### Fixed
+- Union of india DL - dates & address issue fixed.
+
 ## **v3.5.0** - *30-08-2021*
 ### Fixed
 - date of birth and address issue for new voter id card.
