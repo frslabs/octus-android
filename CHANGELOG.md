@@ -1,5 +1,12 @@
 # Changelog
 
+## **v3.6.1** - *02-05-2022*
+### New
+- `removeWatermark()` feature for removal of watermark in Cheque leaf
+- New document type `E_MANDATE_CAT1`
+### Changes
+- Updated `minSdkVersion` to `19`
+
 ## **v3.6.0** - *02-12-2021*
 ### Fixed
 - Union of india DL - dates & address issue fixed.
