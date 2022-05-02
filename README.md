@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.6.0-blue)
+![version](https://img.shields.io/badge/version-v3.6.1-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -34,7 +34,7 @@ Once you have the license , follow the below instructions for a successful integ
 
 ## Android SDK Requirements
 
-**Minimum SDK Version** -  **16** (Ice Cream Sandwich) or higher
+**Minimum SDK Version** -  **19** (Kitkat) or higher
 
 **Compile SDK Version** -  **28**  or higher
 
@@ -223,6 +223,7 @@ public class MainActivity extends AppCompatActivity implements OctusResultCallba
                       .setDocumentSubType(Utility.SubType.OCR)
                       .setDocumentSide(Utility.Side.FRONT_BACK)
                       .aadhaarNumberMasked(false)
+                      .removeWatermark() // Optional and only for Document.CQL
                       .build();
       
               //Call the Octus Sdk to start scanning
@@ -529,5 +530,9 @@ Error codes and their meaning are tabulated below
   | true | Masks the  aadhaar number in the scan result(image) |
   | false | disables masking the aadhaar number in the scan result |
 
+- `removeWatermark()` ***(Optional)*** *(Applies ONLY to Document.CQL)*
+  
+  Sets flag to remove the watermark over the cheque leaf output image. If method is not called, default behavior is to include the watermark.
+  
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
