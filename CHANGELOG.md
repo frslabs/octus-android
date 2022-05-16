@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.6.2** - *16-05-2022*
+### Changes
+- Updated text for visual feedback when scanning Cheque leaf
+
 ## **v3.6.1** - *02-05-2022*
 ### New
 - `removeWatermark()` feature for removal of watermark in Cheque leaf
