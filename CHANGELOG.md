@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.6.3** - *17-05-2022*
+### Fix
+- Updated behaviour of Aadhaar mask flag to return Aadhaar Number instead of VID (as `documentNumber2` in the result)  if enabled.
+
 ## **v3.6.2** - *16-05-2022*
 ### Changes
 - Updated text for visual feedback when scanning Cheque leaf
