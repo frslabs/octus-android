@@ -1,5 +1,11 @@
 # Changelog
 
+## **v3.6.4** - *20-05-2022*
+### Changes
+- Improved E-mandate bottom part crop (Identifies and stops at perforated line)
+- Updated E-mandate specific informational text messages to assist user
+- Updated implementation to support material design library `v1.0.0+`
+
 ## **v3.6.3** - *17-05-2022*
 ### Fix
 - Updated behaviour of Aadhaar mask flag to return Aadhaar Number instead of VID (as `documentNumber2` in the result)  if enabled.
