@@ -233,6 +233,7 @@ public class MainActivity extends AppCompatActivity implements OctusResultCallba
                 
         }catch (OctusInitException e){
               //Handle exception here
+              Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
               e.printStackTrace();
         }
     }
