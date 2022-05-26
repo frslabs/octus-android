@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.6.4-blue)
+![version](https://img.shields.io/badge/version-v3.6.5-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -533,6 +533,15 @@ Error codes and their meaning are tabulated below
 - `removeWatermark()` ***(Optional)*** *(Applies ONLY to Document.CQL)*
   
   Sets flag to remove the watermark over the cheque leaf output image. If method is not called, default behavior is to include the watermark.
+  
+- `setScanTimeLimit(timeInSec)` ***(Optional)***
+  
+  Sets the document scan time limit (in sec). 
+  
+  | Type              | Default value  | Range       |
+  | ----------------- | -------------- | ------------|
+  | Document.CQL      | 25             | 12 - 30     |
+  | Other documents   | 20             | 8 - 30      |
   
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
