@@ -1,5 +1,11 @@
 # Changelog
 
+## **v3.6.5** - *26-05-2022*
+### New
+- [`setScanTimeLimit(timeInSec)`](README.md#octus-parameters) feature for the document scan time limit (in sec)
+### Fixed
+- Fix scan timeout error after successfully scanned
+
 ## **v3.6.4** - *20-05-2022*
 ### Changes
 - Improved E-mandate bottom part crop (Identifies and stops at perforated line)
