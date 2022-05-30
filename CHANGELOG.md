@@ -1,5 +1,10 @@
 # Changelog
 
+## **v3.6.6** - *30-05-2022*
+### Changes
+- Added Flash and Progress Bar UI components for E-mandate document
+- Added custom rectangular UI component for visually assisting user when scanning E-Mandate document
+
 ## **v3.6.5** - *26-05-2022*
 ### New
 - [`setScanTimeLimit(timeInSec)`](README.md#octus-parameters) feature for the document scan time limit (in sec)
