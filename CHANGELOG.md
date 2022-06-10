@@ -4,7 +4,7 @@
 ### Changes
 - Added manual capture flow for E-Mandate document (When Auto Capture fails)
 - Improved E-Mandate document processing logic, updated related UI and UX
-- Added `Passport File number` as response for the following configuration
+- Added `Passport File number` to response (use `octusResult.getDocumentNumber2()` to retrieve) for the following configuration
 ```js
 Country.IN
 Document.PPT
