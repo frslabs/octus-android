@@ -1,5 +1,17 @@
 # Changelog
 
+## **v3.7.1** - *10-06-2022*
+### Changes
+- Added manual capture flow for E-Mandate document (When Auto Capture fails)
+- Improved E-Mandate document processing logic, updated related UI and UX
+- Added `Passport File number` as response for the following configuration
+```js
+Country.IN
+Document.PPT
+Utility.Side.FRONT_BACK
+Utility.SubType.MRZ
+```
+
 ## **v3.6.6** - *30-05-2022*
 ### Changes
 - Added Flash and Progress Bar UI components for E-mandate document
