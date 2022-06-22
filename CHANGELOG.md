@@ -1,5 +1,11 @@
 # Changelog
 
+## **v3.7.2** - *22-06-2022*
+### New
+- Added [`skipDocumentAlternateCaptureMode(boolean skipMode)`](README.md#octus-parameters) to OctusConfig 
+### Changes
+- Improved E-Mandate document detection capabilities
+
 ## **v3.7.1** - *10-06-2022*
 ### Changes
 - Added manual capture flow for E-Mandate document (When Auto Capture fails)
