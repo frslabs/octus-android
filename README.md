@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.7.1-blue)
+![version](https://img.shields.io/badge/version-v3.7.2-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -543,6 +543,15 @@ Error codes and their meaning are tabulated below
   | ----------------- | -------------- | ------------|
   | Document.CQL      | 25             | 12 - 30     |
   | Other documents   | 20             | 8 - 30      |
+  
+- `skipDocumentAlternateCaptureMode(boolean skipMode)` ***(Optional)*** *(Defaults to **false**)*  *(Applies ONLY to Document.E_MANDATE_CAT1)*
+  
+  Sets the flag to enable/disable alternate capture mode. At the moment, only applicable for Document.E_MANDATE_CAT1
+  
+  | Value              | Effect                        |
+  | ------------------ | ----------------------------- |
+  | true | Disables the alternate capture mode |
+  | false | Enables the alternate capture mode |
   
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
