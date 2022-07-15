@@ -1,5 +1,10 @@
 # Changelog
 
+## **v3.8.0** - *15-07-2022*
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0`, contact frslabs@support.com for an updated license.
+- Added support for new license format
+- SDK now targets API 32
+
 ## **v3.7.2** - *22-06-2022*
 ### New
 - Added [`skipDocumentAlternateCaptureMode(boolean skipMode)`](README.md#octus-parameters) to OctusConfig 
