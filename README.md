@@ -1,11 +1,13 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.7.2-blue)
+![version](https://img.shields.io/badge/version-v3.8.0-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
 For the list of supported documents per country , refer to [Octus Country Specific Supported Documents](SUPPORTED_DOCUMENT_BY_COUNTRY.md)
 
 **You can find the latest version and release history [Here](CHANGELOG.md)**
+
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0`, contact frslabs@support.com for an updated license.
 
 # Table Of Content
 
@@ -35,8 +37,6 @@ Once you have the license , follow the below instructions for a successful integ
 ## Android SDK Requirements
 
 **Minimum SDK Version** -  **19** (Kitkat) or higher
-
-**Compile SDK Version** -  **28**  or higher
 
 ## Download
 
