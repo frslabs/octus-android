@@ -1,9 +1,22 @@
 # Changelog
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
+
+## **v3.8.1** - *10-08-2022*
+- Added New document types,
+  - `Document.E_MANDATE_CAT2_PAGE1` - E-Mandate Category 2 - Page 1 Document 
+    - Returns the following results,
+      - fully cropped document via `octusResult.getPhoto1()` 
+      - document cropped at perforated line via `octusResult.getPhoto2()`
+  - `Document.E_MANDATE_CAT2_PAGE2` - E-Mandate Category 2 - Page 2 Document
+    - Returns the following results,
+      - fully cropped document via `octusResult.getPhoto1()`
+- Minor Bug fixes
 
 ## **v3.8.0** - *15-07-2022*
-‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0`, contact support@frslabs.com for an updated license.
 - Added support for new license format
 - SDK now targets API 32
+
+`NOTE:` BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. Contact support@frslabs.com for an updated license.
 
 ## **v3.7.2** - *22-06-2022*
 ### New
