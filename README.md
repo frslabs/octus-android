@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.8.0-blue)
+![version](https://img.shields.io/badge/version-v3.8.1-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -415,6 +415,9 @@ Error codes and their meaning are tabulated below
   | Document.GST   | GST Form               |
   | Document.IMG_ADR | Image Capture Aadhaar  |
   | Document.IMG_ANY | Plain Image capture  |
+  | Document.E_MANDATE_CAT1 | E-Mandate Category 1|
+  | Document.E_MANDATE_CAT2_PAGE1 | E-Mandate Category 2 - Page 1 |
+  | Document.E_MANDATE_CAT2_PAGE2 | E-Mandate Category 2 - Page 2 |
 
 - `setDocumentCountry(Country country)`  ***(Required)***
   
