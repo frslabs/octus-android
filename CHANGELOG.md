@@ -1,6 +1,9 @@
 # Changelog
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
+## **v3.8.3** - *21-11-2022*
+- Bug fixes
+
 ## **v3.8.2** - *11-10-2022*
 - General improvements for E-Mandate Category 2 - Page 1, Page 2 Documents
 - Added Error Codes
