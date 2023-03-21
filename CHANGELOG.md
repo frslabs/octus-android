@@ -1,6 +1,9 @@
 # Changelog
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
+## **v3.8.5** - *20-03-2023*
+- General improvements
+
 ## **v3.8.4** - *24-11-2022*
 - ANR bug fixes
 
