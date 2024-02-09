@@ -73,7 +73,7 @@ allprojects {
         */
         //Maven credentials for the Torus SDK
         maven {
-            url "https://torus-android.repo.frslabs.space/"
+            url "https://www.repo2.frslabs.space/repository/torus-android/"
             credentials {
                 username '<YOUR_USERNAME>'
                 password '<YOUR_PASSOWRD>'
