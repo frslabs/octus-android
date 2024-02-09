@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.8.9-blue)
+![version](https://img.shields.io/badge/version-v3.9.0-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -61,7 +61,7 @@ allprojects {
         //Maven credentials for the Octus SDK
         maven { 
             // URL for Octus SDK. 
-            url "https://octus-android.repo.frslabs.space/"                  
+            url "https://www.repo2.frslabs.space/repository/octus-android/"               
             credentials { 
                    username '<YOUR_USERNAME>' 
                    password '<YOUR_PASSOWRD>' 
