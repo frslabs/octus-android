@@ -3,11 +3,13 @@
 
 ## **v3.9.1** - *19-03-2024*
 - Improve document scanning performance
-- Added Passport issue date(octusResult.getIssueDate()), issue place(octusResult.getAddress3()) and birth place(octusResult.getAddress2()) to response for the following configuration
+- Added Passport `issue date`(`octusResult.getIssueDate()`), `issue place`(`octusResult.getAddress3()`) and `birth place`(`octusResult.getAddress2()`) to response for the following configuration
+```js
 Country.IN
 Document.PPT
 Utility.Side.FRONT_BACK
 Utility.SubType.OCR
+```
 
 ## **v3.9.0** - *17-01-2024*
 - Update font family
