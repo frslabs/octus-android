@@ -1,6 +1,10 @@
 # Changelog
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
+## **v3.9.1** - *19-03-2024*
+- Improve document scanning performance
+- Add more details for indian passport
+
 ## **v3.9.0** - *17-01-2024*
 - Update font family
 
