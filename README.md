@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.9.0-blue)
+![version](https://img.shields.io/badge/version-v3.9.1-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -34,6 +34,22 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 Once you have the license , follow the below instructions for a successful integration of Octus SDK onto your Android Application.
 
+## Overview of Octus SDK Libraries
+
+This section lists the Octus SDK Libraries that are available for android with their gradle dependencies, latest version, and their size.
+
+| SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
+| --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
+| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.1-blue)    | 19.2 MB     |
+| [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
+
+#### Face Dependencies
+Octus uses Face detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Face Bundled SDK](#core-face-bundled) and [Core Face Unbundled SDK](#core-face-unbundled). If size is not an issue, we recommend going with the Core Face Bundled SDK. More details about these dependencies are found below.
+##### Core Face Bundled SDK
+Include this dependency if size of the SDK is not an issue (Adds ~6.2 MB to the app size). This is the recommended approach.
+##### Core Face Unbundled SDK
+Include this dependency if increase in SDK size is a concern (Adds ~600 KB to the app size). However, upon first run (and only on first run), the face dependencies are downloaded while users are shown a screen with a progress bar. The Core Face Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
+
 ## Android SDK Requirements
 
 **Minimum SDK Version** -  **19** (Kitkat) or higher
@@ -59,27 +75,16 @@ allprojects {
         maven { url "https://jitpack.io" }
         
         //Maven credentials for the Octus SDK
-        maven { 
-            // URL for Octus SDK. 
-            url "https://www.repo2.frslabs.space/repository/octus-android/"               
-            credentials { 
-                   username '<YOUR_USERNAME>' 
-                   password '<YOUR_PASSOWRD>' 
-            }
-       }
-       
-       /*
-        *Include below code only for transaction based billing
-        */
-        //Maven credentials for the Torus SDK
-        maven {
-            url "https://www.repo2.frslabs.space/repository/torus-android/"
-            credentials {
-                username '<YOUR_USERNAME>'
-                password '<YOUR_PASSOWRD>'
+        // Use `torus-android` if transaction based billing enabled
+        ['torus-android','octus-android','common-core-android'].each { value ->
+            maven {
+                url "https://www.repo2.frslabs.space/repository/${value}/"
+                credentials {
+                    username '<YOUR_USERNAME>' 
+                    password '<YOUR_PASSOWRD>'
+                }
             }
         }
-        
     }
 }
 ```
@@ -124,7 +129,16 @@ dependencies {
     implementation 'com.frslabs.android.sdk:octus:3.X.X' // Required . Find latest version at https://github.com/frslabs/octus-android/blob/master/CHANGELOG.md
     implementation 'com.github.Tgo1014:JP2ForAndroid:1.0.4' // Required
     implementation 'com.rmtheis:tess-two:9.1.0' // Required
-    implementation 'com.google.android.gms:play-services-vision:15.0.0' // Required
+    //implementation 'com.google.mlkit:barcode-scanning:17.2.0' // Optional - Needed if document type is QR code
+    implementation 'com.google.mlkit:text-recognition:16.0.0'  // Required
+
+    // REQUIRED : Use ANY ONE of the below core-face modules, i.e either core-face-bundled OR core-face-unbundled
+    // Recommended over core-face-unbundled
+    implementation 'com.frslabs.android.sdk:core-face-bundled:1.0.1'
+
+    // Uncomment the below line and remove core-face-bundled mentioned above to use core-face-unbundled dependency.
+    //implementation 'com.frslabs.android.sdk:core-face-unbundled:1.0.1'
+
     implementation 'com.frslabs.android.sdk:torus:1.2.1' // Optional - Needed if transaction based billing is enabled
     implementation 'com.google.code.gson:gson:2.8.6' // Optional - Needed if transaction based billing is enabled
     
@@ -359,8 +373,9 @@ Error codes and their meaning are tabulated below
 | 108  | Internet unavailable          |
 | 401  | API limit exceeded            |
 | 429  | Too many requests             |
-| 501, 502  | Proteus Edge IO error         |
-| 503  | GMS Dependency error          |
+| 501, 502  | Proteus Edge IO error    |
+| 503  | GMS dependency error          |
+| 504  | Face module dependency error  |
 
 ## Octus Parameters
 
@@ -396,9 +411,6 @@ Error codes and their meaning are tabulated below
   | Document.GST   | GST Form               |
   | Document.IMG_ADR | Image Capture Aadhaar  |
   | Document.IMG_ANY | Plain Image capture  |
-  | Document.E_MANDATE_CAT1 | E-Mandate Category 1|
-  | Document.E_MANDATE_CAT2_PAGE1 | E-Mandate Category 2 - Page 1 |
-  | Document.E_MANDATE_CAT2_PAGE2 | E-Mandate Category 2 - Page 2 |
 
 - `setDocumentCountry(Country country)`  ***(Required)***
   
