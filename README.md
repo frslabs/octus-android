@@ -40,7 +40,7 @@ This section lists the Octus SDK Libraries that are available for android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.1-blue)    | 19.2 MB     |
+| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.2-blue)    | 19.2 MB     |
 | [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
 
 #### Face Dependencies
