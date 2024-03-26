@@ -1,6 +1,9 @@
 # Changelog
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
+## **v3.9.2** - *26-03-2024*
+- Bug fixes
+
 ## **v3.9.1** - *19-03-2024*
 - Improve document scanning performance
 - Added Passport `issue date`(`octusResult.getIssueDate()`), `issue place`(`octusResult.getAddress3()`) and `birth place`(`octusResult.getAddress2()`) to response for the following configuration
