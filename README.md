@@ -40,8 +40,9 @@ This section lists the Octus SDK Libraries that are available for android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.2-blue)    | 25.2 MB     |
+| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.5-blue)    | 25.2 MB     |
 | [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
+| [Core Text Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-text-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 6.2 MB     |
 
 #### Face Dependencies
 Octus uses Face detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Face Bundled SDK](#core-face-bundled) and [Core Face Unbundled SDK](#core-face-unbundled). If size is not an issue, we recommend going with the Core Face Bundled SDK. More details about these dependencies are found below.
@@ -49,6 +50,13 @@ Octus uses Face detection capabilities via either of these two dependencies, and
 Include this dependency if size of the SDK is not an issue (Adds ~6.2 MB to the app size). This is the recommended approach.
 ##### Core Face Unbundled SDK
 Include this dependency if increase in SDK size is a concern (Adds ~600 KB to the app size). However, upon first run (and only on first run), the face dependencies are downloaded while users are shown a screen with a progress bar. The Core Face Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
+
+#### Text Dependencies
+Octus also uses text detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Text Bundled SDK](#core-text-bundled) and [Core Text Unbundled SDK](#core-text-unbundled). If size is not an issue, we recommend going with the Core Text Bundled SDK. More details about these dependencies are found below.
+##### Core Text Bundled SDK
+Include this dependency if size of the SDK is not an issue (Adds ~4.0 MB to the app size). This is the recommended approach.
+##### Core Text Unbundled SDK
+Include this dependency if increase in SDK size is a concern (Adds ~250 KB to the app size). However, upon first run (and only on first run), the face dependencies are downloaded while users are shown a screen with a progress bar. The Core Text Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
 
 ## Android SDK Requirements
 
@@ -141,6 +149,12 @@ dependencies {
 
     // Uncomment the below line and remove core-face-bundled mentioned above to use core-face-unbundled dependency.
     //implementation 'com.frslabs.android.sdk:core-face-unbundled:1.0.1'
+
+    // Recommended over core-text-unbundled
+    implementation 'com.frslabs.android.sdk:core-text-bundled:1.0.0'
+
+    // Uncomment the below line and remove core-text-bundled mentioned above to use core-text-unbundled dependency.
+    //implementation 'com.frslabs.android.sdk:core-text-unbundled:1.0.0'
 
     implementation 'com.frslabs.android.sdk:torus:1.2.1' // Optional - Needed if transaction based billing is enabled
     implementation 'com.google.code.gson:gson:2.8.6' // Optional - Needed if transaction based billing is enabled
