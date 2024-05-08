@@ -40,9 +40,9 @@ This section lists the Octus SDK Libraries that are available for android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.5-blue)    | 25.2 MB     |
+| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.5-blue)    | 9.1 MB     |
 | [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
-| [Core Text Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-text-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 6.2 MB     |
+| [Core Text Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-text-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 4.0 MB     |
 
 #### Face Dependencies
 Octus uses Face detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Face Bundled SDK](#core-face-bundled) and [Core Face Unbundled SDK](#core-face-unbundled). If size is not an issue, we recommend going with the Core Face Bundled SDK. More details about these dependencies are found below.
