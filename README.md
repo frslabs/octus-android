@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.9.7-blue)
+![version](https://img.shields.io/badge/version-v3.9.8-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -40,9 +40,10 @@ This section lists the Octus SDK Libraries that are available for android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.7-blue)    | 9.1 MB     |
+| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.8-blue)    | 9.1 MB     |
 | [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
 | [Core Text Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-text-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 4.0 MB     |
+| [Core Scan Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-scan-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 2.4 MB     |
 
 #### Face Dependencies
 Octus uses Face detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Face Bundled SDK](#core-face-bundled) and [Core Face Unbundled SDK](#core-face-unbundled). If size is not an issue, we recommend going with the Core Face Bundled SDK. More details about these dependencies are found below.
@@ -56,7 +57,14 @@ Octus also uses text detection capabilities via either of these two dependencies
 ##### Core Text Bundled SDK
 Include this dependency if size of the SDK is not an issue (Adds ~4.0 MB to the app size). This is the recommended approach.
 ##### Core Text Unbundled SDK
-Include this dependency if increase in SDK size is a concern (Adds ~250 KB to the app size). However, upon first run (and only on first run), the face dependencies are downloaded while users are shown a screen with a progress bar. The Core Text Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
+Include this dependency if increase in SDK size is a concern (Adds ~250 KB to the app size). However, upon first run (and only on first run), the text dependencies are downloaded while users are shown a screen with a progress bar. The Core Text Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
+
+#### Scan Dependencies
+Octus also uses scan detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Scan Bundled SDK](#core-scan-bundled) and [Core Scan Unbundled SDK](#core-scan-unbundled). If size is not an issue, we recommend going with the Core Scan Bundled SDK. More details about these dependencies are found below.
+##### Core Scan Bundled SDK
+Include this dependency if size of the SDK is not an issue (Adds ~2.4 MB to the app size). This is the recommended approach.
+##### Core Scan Unbundled SDK
+Include this dependency if increase in SDK size is a concern (Adds ~200 KB to the app size). However, upon first run (and only on first run), the scan dependencies are downloaded while users are shown a screen with a progress bar. The Core Scan Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
 
 ## Android SDK Requirements
 
