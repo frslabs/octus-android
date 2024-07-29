@@ -2,7 +2,7 @@
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
 ## **v3.9.8** - *04-07-2024*
-- Added bundled and unbundled core text dependencies.
+- Added bundled and unbundled core barcode dependencies.
 - Fixed aadhaar QR scan issues for new aadhaar cards.
 
 ## **v3.9.7** - *24-05-2024*
