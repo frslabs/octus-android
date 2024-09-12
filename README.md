@@ -164,6 +164,9 @@ dependencies {
     // Uncomment the below line and remove core-text-bundled mentioned above to use core-text-unbundled dependency.
     //implementation 'com.frslabs.android.sdk:core-text-unbundled:1.0.0'
 
+    implementation 'com.frslabs.android.sdk:core-scan-unbundled:1.0.0'
+
+
     implementation 'com.frslabs.android.sdk:torus:1.2.1' // Optional - Needed if transaction based billing is enabled
     implementation 'com.google.code.gson:gson:2.8.6' // Optional - Needed if transaction based billing is enabled
     
