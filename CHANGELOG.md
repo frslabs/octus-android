@@ -1,6 +1,9 @@
 # Changelog
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
+## **v3.9.11** - *24-03-2025*
+-  Improvements for aadhaar QR.
+
 ## **v3.9.9** - *18-10-2024*
 - Masked QR for aadhaar card OCR.
 
