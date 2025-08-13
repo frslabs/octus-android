@@ -1,5 +1,5 @@
 # OCTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.9.11-blue)
+![version](https://img.shields.io/badge/version-v3.10.0-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -40,7 +40,7 @@ This section lists the Octus SDK Libraries that are available for android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.9.11-blue)    | 9.1 MB     |
+| [Octus SDK](#octus-sdk) (Required)                                     | com.frslabs.android.sdk:octus                     | ![version](https://img.shields.io/badge/version-v3.10.0-blue)    | 9.1 MB     |
 | [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
 | [Core Text Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-text-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 4.0 MB     |
 | [Core Scan Bundled SDK](#core-text-bundled-sdk) (Required) | com.frslabs.android.sdk:core-scan-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 2.4 MB     |
