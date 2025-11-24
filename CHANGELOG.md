@@ -1,6 +1,12 @@
 # Changelog
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v3.8.0`. We have introduced a new license format. If you are using versions prior to `v3.8.0` and intend to update to `v3.8.0` or above please contact support@frslabs.com for an updated license.
 
+## **v3.10.1** - *07-10-2025*
+-  Update SDK to support 16KB page size.
+
+## **v3.10.0** - *13-08-2025*
+-  Update compile sdk version to 35.
+
 ## **v3.9.11** - *24-03-2025*
 -  Improvements for aadhaar QR.
 
